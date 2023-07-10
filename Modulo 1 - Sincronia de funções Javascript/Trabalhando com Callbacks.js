@@ -14,8 +14,8 @@ function obterUsuario( callback ) {
    }, 1000 );
 }
   
-function obterTelefone( idUsuario, callback ) {
-   setTimeout( () =>{
+function obterTelefone( idDoUsuario, callback ) {
+   setTimeout( () => {
       return callback( null, {
          Telefone: '41984746789',
          DDD: 41
@@ -23,7 +23,7 @@ function obterTelefone( idUsuario, callback ) {
    }, 2000 );
 }
   
-function obterEndereco( idUsuario, callback ) {
+function obterEndereco( idDoUsuario, callback ) {
    setTimeout( () => {
       return callback( null, {
          rua: 'dos bobos',
