@@ -56,7 +56,7 @@ obterUsuario( function resolverUsuario( error, Usuario ) {
          console.log(`
          Nome: ${Usuario.nome},
          Endereco: ${Endereco.rua}, ${Endereco.numero}
-         Telefone: ( ${Telefone.DDD} )${Telefone.Telefone}
+         Telefone: ( ${Telefone.DDD} ) ${Telefone.Telefone}
          `);
       } );
    } );
