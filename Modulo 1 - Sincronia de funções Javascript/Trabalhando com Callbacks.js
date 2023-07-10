@@ -9,7 +9,7 @@ function obterUsuario( callback ) {
       return callback( null, {
          id: 1,
          nome: 'Aladin',
-         dataNascimento: new Date()
+         dataDeNascimento: new Date()
       } );
    }, 1000 );
 }
@@ -32,9 +32,9 @@ function obterEndereco( idUsuario, callback ) {
    }, 2000 );
 }
   
-  // function resolverUsuario( error, Usuario ) {
-  //   console.log( 'Usuario = ', Usuario );
-  // }
+// function resolverUsuario( error, Usuario ) {
+//   console.log( 'Usuario = ', Usuario );
+// }
   
 obterUsuario( function resolverUsuario( error, Usuario ) {
    if( error ) {
@@ -47,7 +47,7 @@ obterUsuario( function resolverUsuario( error, Usuario ) {
          return;
       }
 
-      obterEndereco(Usuario.id, function resolverEndereco( error2, Endereco ){
+      obterEndereco( Usuario.id, function resolverEndereco( error2, Endereco ) {
          if( error2 ) {
                console.log( 'DEU RUIM em Endereço', error );
                return;
