@@ -8,7 +8,7 @@ function obterUsuario( callback ) {
    setTimeout( () => {
       return callback( null, {
          id: 1,
-         nome: 'Aladin',
+         nome: "Aladin",
          dataDeNascimento: new Date()
       } );
    }, 1000 );
@@ -17,7 +17,7 @@ function obterUsuario( callback ) {
 function obterTelefone( idDoUsuario, callback ) {
    setTimeout( () => {
       return callback( null, {
-         Telefone: '41984746789',
+         Telefone: "41984746789",
          DDD: 41
       } );
    }, 2000 );
@@ -26,7 +26,7 @@ function obterTelefone( idDoUsuario, callback ) {
 function obterEndereco( idDoUsuario, callback ) {
    setTimeout( () => {
       return callback( null, {
-         rua: 'dos bobos',
+         rua: "dos bobos",
          numero: 0
       } );
    }, 2000 );
@@ -38,19 +38,19 @@ function obterEndereco( idDoUsuario, callback ) {
   
 obterUsuario( function resolverUsuario( error, Usuario ) {
    if( error ) {
-      console.log( 'DEU RUIM em USUARIO', error );
+      console.log( "DEU RUIM em USUARIO", error );
       return;
    }
    obterTelefone( Usuario.id, function resolverTelefone( error1, Telefone ) {
       if( error1 ) {
-         console.log( 'DEU RUIM em Telefone', error );
+         console.log( "DEU RUIM em Telefone", error );
          return;
       }
 
       obterEndereco( Usuario.id, function resolverEndereco( error2, Endereco ) {
          if( error2 ) {
-               console.log( 'DEU RUIM em Endereço', error );
-               return;
+            console.log( "DEU RUIM em Endereço", error );
+            return;
          }
 
          console.log(`

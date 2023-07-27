@@ -1,0 +1,5 @@
+
+
+function nema() {
+   oninput;
+}
