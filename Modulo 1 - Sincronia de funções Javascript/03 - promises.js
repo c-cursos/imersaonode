@@ -86,7 +86,7 @@ usuarioPromise
             endereco: nextResult
          };
       } );
-   } ) 
+   } )
    .then( function( result ) {
       console.log( ` =================
          result:
