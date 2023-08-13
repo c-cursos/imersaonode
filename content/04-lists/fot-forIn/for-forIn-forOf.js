@@ -5,13 +5,32 @@ const
    Service = require( "./service" );
 
 
-function main() {
-   try {
-      const res = await Service.getPerson( 'a' );
+async function main() {
+   const 
+      names = [];
 
-      // for( let i = 0; i <= res.results.length; i++ ) {
-      for( let i in res.results ) {
+   try {
+      const res = await Service.getPerson( "a" );
+
+      /* for --------------------------------------------- */
+      // for( let i = 0; i <= res.results.length - 1; i++ ) {
+      //    names.push( res.results[i].name );
+      // }
+      /* --------------------------------------------- for */
+
+      /* forIn --------------------------------------------- */
+      // for( let i in res.results ) {
+      //    names.push( res.results[i].name );
+      // }
+      /* --------------------------------------------- forIn */
+
+      /* forOf --------------------------------------------- */
+      for( let i of res.results ) {
+         names.push( i.name );
       }
+      /* --------------------------------------------- forOf */
+
+      log( "names: ", names );
    } catch (error) {
       log(  );
    }
