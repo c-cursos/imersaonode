@@ -22,7 +22,11 @@ getPerson( "r2-d2" )
    } );
 
 
+const 
+   print = ( ...args ) => console.log( ...args );
+
 /* == [ exports ] == == == == == == == == == */
 module.exports = {
-   getPerson
+   getPerson,
+   print
 };
