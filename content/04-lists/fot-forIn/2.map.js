@@ -2,7 +2,8 @@
 
 const 
    Service = require( "./service" ),
-   { log, error } = console;
+   { log, error } = console
+;
 
 /* == [ custom map ] == == == == == == == == == */
 Array.prototype.set = function( callback ) {
