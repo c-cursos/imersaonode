@@ -1,7 +1,25 @@
 
 
 const 
-   { getPerson, print } = require( "./service" );
+   { getPerson, print } = require( "./service" ),
+   ceo = require( "lyhstack" )
+;
+
+Array.prototype.filtro = function( callback ) {
+   const 
+      list = [];
+
+   for( index in this ) {
+      const 
+         item = this[index],
+         res = callback( item, index, this )
+      ;
+
+      if( !res ) continue;
+
+      list.push( item );
+   }
+}; 
 
 async function main() {
    try {
@@ -13,7 +31,10 @@ async function main() {
 
             return res;
          } ),
-         names = familiaLars.map( person => person.name );
+         names = familiaLars.map( person => person.name ),
+         lars = results.filtro( item => 
+            item.name.toLowerCase().indexOf( "lars" ) !== -1 )
+      ;
 
       print( names );
          
